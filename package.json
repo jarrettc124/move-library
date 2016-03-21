@@ -1,0 +1,61 @@
+{
+  "name": "movett",
+  "description": "The backend component of movett",
+  "version": "0.0.2",
+   "engines": {
+    "node": "0.10.*"
+  },
+  "author": {
+    "name": "Jarrett Chen",
+    "email": "jarrettc124@gmail.com"
+  },
+  "contributors": [
+    {
+    "name": "Jarrett Chen",
+    "email": "jarrettc124@gmail.com"
+    }
+  ],
+  "dependencies": {
+    "express": "<4.0.0",
+    "express-session": "*",
+    "express-logger": "*",
+    "body-parser": "*",
+    "cookie-parser": "*",
+    "jade": "*",
+    "mongoose": "~3.8",
+    "underscore": "*",
+    "coffee-script": "*",
+    "nodeunit": "*",
+    "mongodb": "*",
+    "connect-mongodb": "*",
+    "connect-flash": "*",
+    "q": "*",
+    "natural": "*",
+    "ghiraldi-simple-logger": "*",
+    "less-middleware": "*",
+    "async": "*",
+    "mocha": "*",
+    "oauth": "*",
+    "cron": "*",
+    "nodemailer":"*",
+    "request": "*",
+    "passport": "*",
+    "express.io": "*",
+    "sprintf": "*",
+    "markdown": "*",
+    "coffee-script": "*",
+    "method-override": "*",
+    "apn": "*",
+    "passport-facebook": "*",
+    "passport-facebook-token": "*",
+    "mandrill-api": "*",
+    "agenda": "*",
+    "cloudinary": "*",
+    "geojson-utils": "*",
+    "morgan": "*",
+    "passport-jwt":"*",
+    "jsonwebtoken":"*",
+    "passport-local":"*",
+    "apn":"*"
+  }
+}

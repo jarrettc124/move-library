@@ -1,0 +1,36 @@
+extends ../admin/layout
+
+block content
+    section
+        .page-header
+            h1 Create a new User
+        form.form-horizontal(method="post", action="/users/create")
+            .control-group
+                label.control-label(for='username') Username:
+                .controls
+                    input#username(type="text", name="user[username]");
+            .control-group
+                label.control-label(for='email') Email:
+                .controls
+                    input#email(type="text", name="user[email]");
+            .control-group
+                label.control-label(for='password') Password:
+                .controls
+                    input#passwrd(type="password", name="user[password]");
+            .control-group
+                label.control-label(for='first_name') First Name:
+                .controls
+                    input#first_name(type="text", name="user[firstName]");
+            .control-group
+                label.control-label(for='last_name') Last Name:
+                .controls
+                    input#last_name(type="text", name="user[lastName]");
+            .control-group
+                label.control-label(for='role') Role:
+                .controls
+                    select#role(name="user[role]")
+                        - each role in roles
+                            option(value="#{role._id}") #{role.title}
+            .control-group
+                .controls
+                    input.btn.btn-primary(type="submit", value="Add")    

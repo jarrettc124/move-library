@@ -1,0 +1,21 @@
+doctype html
+html(ng-app="SPopSite")
+    head
+        title SPOP
+        // Fonts
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        block css
+            link(rel="stylesheet", href="components/bootstrap/dist/css/bootstrap.min.css")
+            include otherCss
+        include utilScripts
+        // Angular App Includes
+        include angularAppScripts
+        block scripts
+    body
+        block container
+            // block headers
+            // block pages
+            // block footers
+    block userScripts
+        include otherScripts
+    // include analytics

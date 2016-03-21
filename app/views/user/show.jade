@@ -1,0 +1,28 @@
+extends ../admin/layout
+
+block content
+    section
+        .page-header
+            h1 Viewing user #{user.username}
+        table
+            thead
+                tr
+                    th Username
+                    th First Name
+                    th Last name
+                    th Email
+                    th Gender
+                    th(colspan=2) Actions
+            tr
+                td
+                    =user.username
+                td
+                    =user.firstName
+                td
+                    =user.lastName
+                td
+                    =user.email
+                td
+                    =user.gender
+                td
+                    a.btn(href="/users/edit/#{user._id}") Edit

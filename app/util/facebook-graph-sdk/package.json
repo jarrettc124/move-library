@@ -1,0 +1,21 @@
+{
+  "name": "Facebook Graph SDK",
+  "description": "A node.js api for accessing the Facebook Graph API.",
+  "version": "0.1.0",
+  "author": {
+    "name": "John O'Connor",
+    "email": "john@mycardblanc.com"
+  },
+  "contributors": [
+    {
+      "name": "John O'Connor",
+      "email": "john@mycardblanc.com"
+    }
+  ],
+  "dependencies": {
+    "https": "*",
+    "underscore": "*",
+    "q": "*"
+  },
+  "main": "index"
+}

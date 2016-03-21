@@ -1,0 +1,82 @@
+{
+    "environment": "development",
+    "production": {
+        "data": {
+            "provider": "mongodb",
+            "host": "ds051595.mongolab.com:51595",
+            "database": "movett",
+            "username": "movett",
+            "password": "Freaky2015"
+        },
+        "appSettings": {
+            "uploadDir": "/tmp/upload",
+            "publicDir": "/public",
+            "sessionSecretSalt": "23fj39enfqwi2@#4fw23492(!@#$!@#mfj1o1!@If(I@JF",
+            "viewsDir": "/views",
+            "viewEngine": "jade"
+        },
+        "facebook": {
+            "clientID": "1008327652557783",
+            "clientSecret": "2e125b23b02446741bdfefb60fbc3b3f",
+            "profileFields": ["id", "gender", "name"]
+        },
+        "apn": {
+        	"cert" : "../spoppushcert.pem",
+        	"key" : "../spoppushkey.pem",
+            "passphrase": "j4rr3tt", 
+            "production": true
+        },
+        "host": {
+            "url": "https://spop.herokuapp.com"
+        },
+        "newrelic": {
+            "app_name": ["spop"],
+            "license_key": "d5b4e691e3ee5f90e4c773aeac8cb519767ad597",
+            "logging": {
+                "level": "trace"
+            }
+        },
+        "cloudinary": {
+            "cloud_name": "dlnmjbdap", 
+            "api_key": "796521573844278",
+            "api_secret": "PxYJDkNFQ-Z7j5pQWDsEeQZj4hA"
+        }
+    },
+    "development": {
+        "data": {
+            "provider": "mongodb",
+            "host": "ds051595.mongolab.com:51595",
+            "database": "movett",
+            "username": "movett",
+            "password": "Freaky2015"
+        },
+        "appSettings": {
+            "uploadDir": "/tmp/upload",
+            "publicDir": "/public",
+            "sessionSecretSalt": "23fj39enfqwi2@#4fw23492(!@#$!@#mfj1o1!@If(I@JF",
+            "viewsDir": "/views",
+            "viewEngine": "jade"
+        },
+        "facebook": {
+            "clientID": "1008327652557783",
+            "clientSecret": "2e125b23b02446741bdfefb60fbc3b3f",
+            "profileFields": ["id", "gender", "name"]
+        },
+        "apn": {
+            "cert" : "../spoppushcert.pem",
+        	"key" : "../spoppushkey.pem",
+            "passphrase": "j4rr3tt",  
+            "production": false
+        },
+        "host": {
+            "url": "https://spop-c9-sax1johno.c9.io"
+        },
+        "cloudinary": {
+            "cloud_name": "dlnmjbdap", 
+            "api_key": "796521573844278",
+            "api_secret": "PxYJDkNFQ-Z7j5pQWDsEeQZj4hA"
+        }
+    },
+    "staging": {
+    }
+}

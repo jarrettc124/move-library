@@ -1,0 +1,25 @@
+extends loginlayout
+
+block content
+    section
+        .account-container
+            .content.clearfix
+                form.form-horizontal(method="post", action="/login/process")
+                    h1 Log In
+                    .login-fields
+                        p Sign in to the CardBlanc Admin Interface.
+                        .field
+                            label(for='username') Username:
+                            input.login.username-field#username(type="text", name="loginInfo[username]", value="", placeholder="Username")
+                        .field
+                            label(for="password") Password
+                            input.login.password-field#password(type="password", name="loginInfo[password]", value="", placeholder="Password")
+                    .login-actions
+                        span.login-checkbox
+                            input.field.login-checkbox(type="checkbox", value="First Choice", tabindex="4", name="loginInfo[rememberMe]")
+                            label.choice(for="Field") Keep me signed in
+                    .control-group
+                        .controls
+                            input.btn.btn-primary(type="submit", value="Log in")
+        .login-extra 
+        

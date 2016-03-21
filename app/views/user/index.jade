@@ -1,0 +1,44 @@
+extends ../admin/layout
+
+include ../datatable
+
+block content
+    section
+        .page-header
+            h1 Users
+                a.btn.btn-primary.float-right(href="/users/add") Add User
+        .well Use the table below to scroll through the current users, or search using the search box.  You can also add a new user with the "add user" button above.
+        table.table-striped.datatable
+            thead.align-left
+                tr
+                    th Picture
+                    th Username
+                    th Email
+                    th First Name
+                    th Last Name
+                    th Role
+                    th Actions
+            tbody
+                - users.forEach(function(user){
+                    tr
+                        td
+                            img(style="width:50px", src="https://graph.facebook.com/#{user.username}/picture")
+                        td
+                            a(href="/users/edit/#{user._id}") #{user.username}
+                        td= user.email
+                        td= user.firstName
+                        td= user.lastName
+                        td
+                            - if (user.role !== undefined && user.role !== null) {
+                                - each role in roles
+                                    - if (user.role == role._id.toString()) {
+                                        =role.title
+                                    - }
+                            - }
+                        td
+                            - if (user.username == 'admin') {
+                                a(href='/users/#{user._id}').btn.btn-danger.destroy.disabled Delete
+                            - } else {
+                                a(href='/users/#{user._id}').btn.btn-danger.destroy Delete
+                            - }
+                -})

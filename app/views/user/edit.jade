@@ -1,0 +1,50 @@
+extends ../admin/layout
+
+block content
+    section
+        .page-header
+            h1 Editing user #{user.username}
+        .row
+            .span3
+                img(style="width:150px;", src="https://graph.facebook.com/#{user.username}/picture")
+                form.form-horizontal.pull-left
+                    .control-group
+                        label.control-label(for='username') Username:
+                        .controls
+                            input#username.input-small(type="text", name="", value="#{user.username}", readonly)
+                    .control-group
+                        label.control-label(for='gender') Gender:
+                        .controls
+                            input#gender.input-small(type="text", name="", value="#{user.gender}", readonly)
+            .span8
+                form.form-horizontal(method="post", action="/users/#{user._id}")
+                    input(type="hidden", name="_method", value="put")
+                    .control-group
+                        label.control-label(for='email') Email: 
+                        .controls
+                            input#email(type="text", name="user[email]", value="#{user.email}")
+                    .control-group
+                        label.control-label(for='password') Password:
+                        .controls
+                            input#password(type="password", name="user[password]")
+                    .control-group
+                        label.control-label(for='first_name') First Name:
+                        .controls
+                            input#first_name(type="text", name="user[firstName]", value="#{user.firstName}")
+                    .control-group
+                        label.control-label(for='last_name') Last Name:
+                        .controls
+                            input#last_name(type="text", name="user[lastName]", value="#{user.lastName}")
+                    .control-group
+                        label.control-label(for='role') Role:
+                        .controls
+                            select#role(name="user[role]")
+                                - each role in roles
+                                    - if (user.role == role._id.toString()) {
+                                        option(value="#{role._id}", selected="selected") #{role.title}
+                                    - } else {
+                                        option(value="#{role._id}") #{role.title}
+                                    - }
+                    .control-group
+                        .controls
+                            input.btn.btn-primary(type="submit", value="Update")    
